@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foodie - Cashier Settings</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="dashboard-page">
+  <aside class="sidebar">
+      <div class="sidebar-header">
+        <img class="logo" src="../assets/logo/LogoFoodie.png" alt="" srcset="">
+          <p class="role">Cashier</p>
+      </div>
+      
+      <nav class="sidebar-nav">
+          <ul>
+              <li><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+              <li><a href="orders.html"><i class="fas fa-clipboard-list"></i> Orders</a></li>
+              <li><a href="transactions.html"><i class="fas fa-receipt"></i> Transactions</a></li>
+              <li class="active"><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+          </ul>
+      </nav>
+      
+      <div class="sidebar-footer">
+          <div class="user-info">
+              <div class="user-avatar">
+                  <i class="fas fa-user"></i>
+              </div>
+              <div class="user-details">
+                  <p id="user-name">Cashier Name</p>
+                  <p id="user-id">ID: CSH001</p>
+              </div>
+          </div>
+          <a href="../login_cashier.html" id="logout-button" class="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+  </aside>
+  
+  <main class="main-content">
+      <header class="dashboard-header">
+          <div class="header-left">
+              <button id="toggle-sidebar" class="toggle-sidebar">
+                  <i class="fas fa-bars"></i>
+              </button>
+              <h2>Settings</h2>
+          </div>
+          <div class="header-right">
+              <div class="date-time">
+                  <span id="current-date">Date</span>
+                  <span id="current-time">Time</span>
+              </div>
+              <div class="notifications">
+                  <button id="notification-button" class="notification-button">
+                      <i class="fas fa-bell"></i>
+                      <span class="notification-badge">3</span>
+                  </button>
+              </div>
+          </div>
+      </header>
+      
+      <div class="dashboard-container">
+          <div class="settings-container">
+              <div class="settings-section">
+                  <h3>Account Settings</h3>
+                  <div class="settings-card">
+                      <div class="settings-form">
+                          <div class="form-group">
+                              <label for="username">Username</label>
+                              <input type="text" id="username" value="cashier1" disabled>
+                          </div>
+                          <div class="form-group">
+                              <label for="display-name">Display Name</label>
+                              <input type="text" id="display-name" value="Ahsan Sunandar">
+                          </div>
+                          <div class="form-group">
+                              <label for="email">Email</label>
+                              <input type="email" id="email" value="Ahsan.Sunandar@example.com">
+                          </div>
+                          <div class="form-group">
+                              <label for="phone">Phone Number</label>
+                              <input type="tel" id="phone" value="081234567890">
+                          </div>
+                          <button class="save-button">Save Changes</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="settings-section">
+                  <h3>Change Password</h3>
+                  <div class="settings-card">
+                      <div class="settings-form">
+                          <div class="form-group">
+                              <label for="current-password">Current Password</label>
+                              <input type="password" id="current-password">
+                          </div>
+                          <div class="form-group">
+                              <label for="new-password">New Password</label>
+                              <input type="password" id="new-password">
+                          </div>
+                          <div class="form-group">
+                              <label for="confirm-password">Confirm New Password</label>
+                              <input type="password" id="confirm-password">
+                          </div>
+                          <button class="save-button">Change Password</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="settings-section">
+                  <h3>Notification Settings</h3>
+                  <div class="settings-card">
+                      <div class="settings-form">
+                          <div class="form-group checkbox">
+                              <input type="checkbox" id="new-order-notification" checked>
+                              <label for="new-order-notification">New Order Notifications</label>
+                          </div>
+                          <div class="form-group checkbox">
+                              <input type="checkbox" id="payment-notification" checked>
+                              <label for="payment-notification">Payment Notifications</label>
+                          </div>
+                          <div class="form-group checkbox">
+                              <input type="checkbox" id="order-status-notification" checked>
+                              <label for="order-status-notification">Order Status Updates</label>
+                          </div>
+                          <div class="form-group checkbox">
+                              <input type="checkbox" id="email-notification" checked>
+                              <label for="email-notification">Email Notifications</label>
+                          </div>
+                          <button class="save-button">Save Preferences</button>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="settings-section">
+                  <h3>System Settings</h3>
+                  <div class="settings-card">
+                      <div class="settings-form">
+                          <div class="form-group">
+                              <label for="language">Language</label>
+                              <select id="language">
+                                  <option value="en" selected>English</option>
+                                  <option value="id">Bahasa Indonesia</option>
+                              </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="timezone">Timezone</label>
+                              <select id="timezone">
+                                  <option value="Asia/Jakarta" selected>Asia/Jakarta (GMT+7)</option>
+                                  <option value="Asia/Makassar">Asia/Makassar (GMT+8)</option>
+                                  <option value="Asia/Jayapura">Asia/Jayapura (GMT+9)</option>
+                              </select>
+                          </div>
+                          <div class="form-group checkbox">
+                              <input type="checkbox" id="dark-mode">
+                              <label for="dark-mode">Dark Mode</label>
+                          </div>
+                          <button class="save-button">Save Settings</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+  
+  <!-- <script src="../js/cashier-settings.js"></script> -->
+</body>
+</html>
+
